@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+
+    sonar:
+        image: sonarqube:5.6.3-alpine
+        ports:
+            - "9000:9000"
+        depends_on:
+            - sonardb
+        environment:
+            - SONARQUBE_JDBC_URL=jdbc:mysql://sonardb:3306/sonar?useUnicode=true&characterEncoding=utf8
+            - SONARQUBE_JDBC_USERNAME=sonar
+            - SONARQUBE_JDBC_PASSWORD=sonarmysql
+
+    sonardb:
+        image: mysql:5.7
+        volumes_from:
+            - volumes_data
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_DATABASE: sonar
+            MYSQL_USER: sonar
+            MYSQL_PASSWORD: sonarmysql
+            MYSQL_ROOT_PASSWORD: sonarroot
+
+    ### Databases Data Container ################################
+
+    volumes_data:
+        image: tianon/true
+        volumes:
+            - ./data/mysql:/var/lib/mysql
