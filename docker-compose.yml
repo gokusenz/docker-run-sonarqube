@@ -14,7 +14,7 @@ services:
             - SONARQUBE_JDBC_PASSWORD=sonarmysql
 
     sonardb:
-        image: mysql:5.7
+        image: mysql:5.7.17
         volumes_from:
             - volumes_data
         ports:
