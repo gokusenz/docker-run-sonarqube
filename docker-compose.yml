@@ -25,8 +25,6 @@ services:
             MYSQL_PASSWORD: sonarmysql
             MYSQL_ROOT_PASSWORD: sonarroot
 
-    ### Databases Data Container ################################
-
     volumes_data:
         image: tianon/true
         volumes:
