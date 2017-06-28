@@ -1,0 +1,5 @@
+projectKey=hello-next
+serverUrl=http://sonarqube.thinknet.co.th
+dashboardUrl=http://sonarqube.thinknet.co.th/dashboard/index/hello-next
+ceTaskId=AVztc9nqLWAkXWbWxLAH
+ceTaskUrl=http://sonarqube.thinknet.co.th/api/ce/task?id=AVztc9nqLWAkXWbWxLAH
