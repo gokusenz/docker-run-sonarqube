@@ -4,5 +4,5 @@ docker-compose for start SonarQube with MySQL
 ## Start SonarQube Server
 docker-compose up
 
-## SonarQube
+## SonarQube admin
 user: admin pass: admin
