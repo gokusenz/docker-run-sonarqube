@@ -1,4 +1,4 @@
-# docker-run-sonarqube
+# docker-run-sonarqube-with-MySQL
 docker-compose for start SonarQube with MySQL
 
 ## Start SonarQube Server
